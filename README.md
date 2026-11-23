@@ -2,14 +2,37 @@
 
 Descargas oficiales de **QemuManager Qt**, un gestor de máquinas virtuales QEMU para Windows con interfaz en español.
 
-## Versión actual: 2.3.0
+## Versión terminada: 2.3.0
 
 - Corregido el fallo de arranque que afectaba a equipos con procesadores antiguos. El programa ya no usa instrucciones que esos equipos no entienden.
 - Incluye **QEMU 11.0.92**, probado y copiado sin modificar. QemuManager no descarga QEMU de internet ni lo actualiza por su cuenta.
 - Si vienes de una versión anterior, el instalador retira los restos viejos antes de copiar los archivos nuevos.
-- El actualizador solo consulta versiones estables, y solo cuando pulsas **Buscar actualización**. El equipo no se reinicia sin avisar.
+- El equipo no se reinicia sin avisar.
+
+## Versión de prueba: 2.4.0-beta1
+
+Es una versión para probar antes de publicar la 2.4.0 terminada. Si no quieres probarla, quédate con la versión 2.3.0 de más abajo.
+
+- Aviso al abrir si hay una versión nueva, siempre con confirmación antes de instalar.
+- Canal beta opcional: en **Configuración → Actualizaciones** puedes activar **Recibir versiones beta**. Viene desactivado; si no lo activas, solo se te avisa de las versiones terminadas.
+- Más modelos de procesador y de tarjeta de red, más tarjetas gráficas, discos NVMe y teclado y ratón USB.
+- Incluye **QEMU 11.1.0** terminado, copiado sin modificar. QEMU nunca se actualiza por separado.
+- QemuManager sigue sin reiniciar el equipo por su cuenta.
 
 ## Descargar
+
+### Versión de prueba 2.4.0-beta1 (opcional)
+
+Instalador: **QM.manager.exe** (versión 2.4.0-beta1)
+
+- [Descarga directa](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/QM.manager.exe)
+- [Página de la versión beta](https://github.com/starnix-g/QemuManager-releases/releases/tag/beta)
+- [Notas de la versión en texto](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/notas-beta.txt)
+
+Tamaño: **77.847.494 bytes**  
+SHA256: `ae750403befd42e4cf7dee21a265de83d654209ac2f65a1b89f60a8e61257a9f`
+
+### Versión terminada 2.3.0
 
 Instalador: **QM.manager.exe** (versión 2.3.0)
 
@@ -20,13 +43,13 @@ Instalador: **QM.manager.exe** (versión 2.3.0)
 Tamaño: **65.682.238 bytes**  
 SHA256: `8d83c2df3a3685d9ad0989ec50482f7c7abca32bf08bde6b890f6caa22d1ce72`
 
-El instalador no está firmado digitalmente. Descárgalo solo desde este sitio. Si quieres comprobar la descarga, abre PowerShell en la carpeta donde lo guardaste y escribe:
+Los instaladores no están firmados digitalmente. Descárgalos solo desde este sitio. Si quieres comprobar la descarga, abre PowerShell en la carpeta donde lo guardaste y escribe:
 
 ```
 Get-FileHash "QM.manager.exe" -Algorithm SHA256
 ```
 
-El valor mostrado debe coincidir con el SHA256 de arriba.
+El valor mostrado debe coincidir con el SHA256 de la versión que descargaste.
 
 ## Qué necesitas
 
@@ -36,8 +59,8 @@ El valor mostrado debe coincidir con el SHA256 de arriba.
 
 ## Sobre este repositorio
 
-Aquí solo se publican instaladores y notas de versiones estables. No se publica código fuente.
+Aquí se publican instaladores y notas de versiones. La versión terminada está en la etiqueta `v2.3.0`; la de prueba está en la etiqueta fija `beta` y no sustituye a la terminada. No se publica código fuente.
 
 Si algo no funciona, guarda el mensaje de error o la ruta del registro que muestra el programa y cuéntalo en el lugar donde recibiste el enlace, indicando el modelo del equipo y la versión de Windows.
 
-QemuManager fue creado originalmente por **DeepSeek**.
+QemuManager se construyó con la ayuda de **DeepSeek** y otros modelos de lenguaje.
