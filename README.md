@@ -9,12 +9,14 @@ Descargas oficiales de **QemuManager Qt**, un gestor de máquinas virtuales QEMU
 - Si vienes de una versión anterior, el instalador retira los restos viejos antes de copiar los archivos nuevos.
 - El equipo no se reinicia sin avisar.
 
-## Versión de prueba: 2.4.0-beta1
+## Versión de prueba: 2.4.0-beta2
 
 Es una versión para probar antes de publicar la 2.4.0 terminada. Si no quieres probarla, quédate con la versión 2.3.0 de más abajo.
 
 - Aviso al abrir si hay una versión nueva, siempre con confirmación antes de instalar.
 - Canal beta opcional: en **Configuración → Actualizaciones** puedes activar **Recibir versiones beta**. Viene desactivado; si no lo activas, solo se te avisa de las versiones terminadas.
+- La descarga muestra una barra de progreso con botón **Cancelar descarga**. Si algo falla al empezar, puedes volver a intentarlo o abrir la página de descarga; no se instala nada a medias.
+- Al abrir el programa se retiran los instaladores que hubieran quedado en la carpeta temporal de sesiones anteriores.
 - Más modelos de procesador y de tarjeta de red, más tarjetas gráficas, discos NVMe y teclado y ratón USB.
 - Incluye **QEMU 11.1.0** terminado, copiado sin modificar. QEMU nunca se actualiza por separado.
 - QemuManager sigue sin reiniciar el equipo por su cuenta.
@@ -23,14 +25,14 @@ Es una versión para probar antes de publicar la 2.4.0 terminada. Si no quieres 
 
 ### Versión de prueba 2.4.0-beta1 (opcional)
 
-Instalador: **QM.manager.exe** (versión 2.4.0-beta1)
+Instalador: **QM.manager.exe** (versión 2.4.0-beta2)
 
 - [Descarga directa](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/QM.manager.exe)
 - [Página de la versión beta](https://github.com/starnix-g/QemuManager-releases/releases/tag/beta)
 - [Notas de la versión en texto](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/notas-beta.txt)
 
-Tamaño: **77.847.494 bytes**  
-SHA256: `ae750403befd42e4cf7dee21a265de83d654209ac2f65a1b89f60a8e61257a9f`
+Tamaño: **77.860.302 bytes**  
+SHA256: `a6cbc8b0c43f40f15879db07720b71fae85d643c5eeef9b7508fd95479d1b250`
 
 ### Versión terminada 2.3.0
 
