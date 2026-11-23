@@ -9,30 +9,32 @@ Descargas oficiales de **QemuManager Qt**, un gestor de máquinas virtuales QEMU
 - Si vienes de una versión anterior, el instalador retira los restos viejos antes de copiar los archivos nuevos.
 - El equipo no se reinicia sin avisar.
 
-## Versión de prueba: 2.4.0-beta2
+## Versión de prueba: 2.3.1-beta3
 
-Es una versión para probar antes de publicar la 2.4.0 terminada. Si no quieres probarla, quédate con la versión 2.3.0 de más abajo.
+Es una versión para probar antes de publicar la 2.3.1 terminada. Si no quieres probarla, quédate con la versión 2.3.0 de más abajo.
+
+Las betas siguen la línea **2.3.x** y solo ajustan lo que ya está en prueba: no añaden funciones nuevas. Cuando haya funciones nuevas o sugerencias que implementar, se pasará a la línea **2.4.x** con betas propias (2.4.0-beta1, 2.4.1-beta1 y así sucesivamente).
 
 - Aviso al abrir si hay una versión nueva, siempre con confirmación antes de instalar.
 - Canal beta opcional: en **Configuración → Actualizaciones** puedes activar **Recibir versiones beta**. Viene desactivado; si no lo activas, solo se te avisa de las versiones terminadas.
-- La descarga muestra una barra de progreso con botón **Cancelar descarga**. Si algo falla al empezar, puedes volver a intentarlo o abrir la página de descarga; no se instala nada a medias.
-- Al abrir el programa se retiran los instaladores que hubieran quedado en la carpeta temporal de sesiones anteriores.
 - Más modelos de procesador y de tarjeta de red, más tarjetas gráficas, discos NVMe y teclado y ratón USB.
 - Incluye **QEMU 11.1.0** terminado, copiado sin modificar. QEMU nunca se actualiza por separado.
+- La descarga muestra una barra de progreso con botón **Cancelar descarga**. Si algo falla al empezar, puedes volver a intentarlo o abrir la página de descarga; no se instala nada a medias.
+- Al abrir el programa se retiran los instaladores que hubieran quedado en la carpeta temporal de sesiones anteriores.
 - QemuManager sigue sin reiniciar el equipo por su cuenta.
 
 ## Descargar
 
-### Versión de prueba 2.4.0-beta1 (opcional)
+### Versión de prueba 2.3.1-beta3 (opcional)
 
-Instalador: **QM.manager.exe** (versión 2.4.0-beta2)
+Instalador: **QM.manager.exe** (versión 2.3.1-beta3)
 
 - [Descarga directa](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/QM.manager.exe)
 - [Página de la versión beta](https://github.com/starnix-g/QemuManager-releases/releases/tag/beta)
 - [Notas de la versión en texto](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/notas-beta.txt)
 
-Tamaño: **77.860.302 bytes**  
-SHA256: `a6cbc8b0c43f40f15879db07720b71fae85d643c5eeef9b7508fd95479d1b250`
+Tamaño: **77.857.074 bytes**  
+SHA256: `e76380e4d33d4ea7b21d30257f514c690e2b4270cd6fd7ae90f73ae99fa2d49e`
 
 ### Versión terminada 2.3.0
 
