@@ -9,12 +9,11 @@ Descargas oficiales de **QemuManager Qt**, un gestor de máquinas virtuales QEMU
 - Si vienes de una versión anterior, el instalador retira los restos viejos antes de copiar los archivos nuevos.
 - El equipo no se reinicia sin avisar.
 
-## Versión de prueba: 2.3.1-beta3
+## Corrección en prueba: 2.3.1.1
 
-Es una versión para probar antes de publicar la 2.3.1 terminada. Si no quieres probarla, quédate con la versión 2.3.0 de más abajo.
+Es una corrección de errores sobre la 2.3.1-beta3: **no añade funciones**. Sigue en el canal de pruebas hasta que se publique la 2.3.1 terminada. Si no quieres probarla, quédate con la versión 2.3.0 de más abajo.
 
-Las betas siguen la línea **2.3.x** y solo ajustan lo que ya está en prueba: no añaden funciones nuevas. Cuando haya funciones nuevas o sugerencias que implementar, se pasará a la línea **2.4.x** con betas propias (2.4.0-beta1, 2.4.1-beta1 y así sucesivamente).
-
+- **Arreglo de la ayuda.** En las cinco pestañas se puede recorrer el texto con flechas, RePág/AvPág, Inicio/Fin y Ctrl+Inicio/Ctrl+Fin. Antes solo se leía la primera línea. El texto es de solo lectura: se puede copiar, pero no borrar. Lo mismo se aplica al informe de WHPX, al resultado de la comprobación de QEMU, al comando exacto y a las novedades de la actualización.
 - Aviso al abrir si hay una versión nueva, siempre con confirmación antes de instalar.
 - Canal beta opcional: en **Configuración → Actualizaciones** puedes activar **Recibir versiones beta**. Viene desactivado; si no lo activas, solo se te avisa de las versiones terminadas.
 - Más modelos de procesador y de tarjeta de red, más tarjetas gráficas, discos NVMe y teclado y ratón USB.
@@ -23,18 +22,20 @@ Las betas siguen la línea **2.3.x** y solo ajustan lo que ya está en prueba: n
 - Al abrir el programa se retiran los instaladores que hubieran quedado en la carpeta temporal de sesiones anteriores.
 - QemuManager sigue sin reiniciar el equipo por su cuenta.
 
+Los números tienen cuatro partes: las tres primeras son la versión y la última cuenta las correcciones, así que 2.3.1.1 es la primera corrección de la 2.3.1. Las versiones de prueba llevan un sufijo, como 2.3.1-beta3. Cuando haya funciones nuevas se pasará a la línea **2.4.x** con sus propias betas.
+
 ## Descargar
 
-### Versión de prueba 2.3.1-beta3 (opcional)
+### Corrección 2.3.1.1 en el canal de pruebas (opcional)
 
-Instalador: **QM.manager.exe** (versión 2.3.1-beta3)
+Instalador: **QM.manager.exe** (versión 2.3.1.1)
 
 - [Descarga directa](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/QM.manager.exe)
 - [Página de la versión beta](https://github.com/starnix-g/QemuManager-releases/releases/tag/beta)
 - [Notas de la versión en texto](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/notas-beta.txt)
 
-Tamaño: **77.857.074 bytes**  
-SHA256: `e76380e4d33d4ea7b21d30257f514c690e2b4270cd6fd7ae90f73ae99fa2d49e`
+Tamaño: **77.861.540 bytes**  
+SHA256: `bd03b7f9f72f30ed34bf6399896bfa1a422b7629ceee80332e49ea5864be23e5`
 
 ### Versión terminada 2.3.0
 
