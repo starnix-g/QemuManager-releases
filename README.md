@@ -11,22 +11,30 @@ Descargas oficiales de **StiexVM** (antes QemuManager Qt), un gestor de máquina
 
 ## Cambios recientes de la línea 2.4
 
-Esta línea sigue en el canal de pruebas. La versión terminada es la 2.3.0, más abajo.
+Esta línea sigue en el canal de pruebas. La versión terminada es la 2.3.0.
 
-### 2.4.4 — detención de máquinas
+### 2.4.5 - pantalla integrada y audio estable
+
+- La pantalla de la máquina se muestra dentro de StiexVM desde el inicio, sin ventana propia de QEMU. El visor se abre al iniciar y queda activo para escribir en la máquina. Escape devuelve el control a StiexVM.
+- Al capturar el teclado, las teclas llegan a la máquina aunque el foco estuviera en un botón del visor. Pulsar sobre la pantalla también captura el teclado.
+- Los perfiles creados con versiones anteriores pasan a la pantalla integrada al cargarse. El resto de ajustes se conservan.
+- Si dos máquinas tienen el mismo puerto VNC, la que arranca toma el primero libre.
+- El sonido usa frecuencia fija de 44,1 kHz, dos canales, formato s16 y un búfer de salida mayor. La tarjeta emulada queda como salida sola, sin entrada de micrófono, para evitar cortes y ruidos cuando el invitado abre el audio.
+
+### 2.4.4 - detención de máquinas
 
 - El diálogo de detención indica que la máquina se detiene de forma inmediata y que los cambios pendientes del sistema invitado podrían no guardarse. Se retiraron comparaciones y ejemplos innecesarios.
 - El botón pasa a «Deteniendo…» y queda desactivado en cuanto se confirma la detención, sin esperar al sondeo del proceso. La lista muestra «Deteniéndose» y, al terminar el proceso, el botón vuelve a «Iniciar».
 - Si el proceso sigue activo tres segundos después de pedir la detención, se fuerza su salida.
 - Una detención manual cancela cualquier reinicio automático registrado por un aviso anterior de la máquina.
 
-### 2.4.3 — elección por familia y Macintosh PowerPC
+### 2.4.3 - elección por familia y Macintosh PowerPC
 
-- Arquitectura, familia de procesador y modelo concreto, en ese orden. Las listas largas se agrupan en bloques cortos (Pentium, Core, Xeon, EPYC, Cortex-A, Cortex-M, Neoverse…), con un orden fijo que permite recorrerlas con Tab.
+- Arquitectura, familia de procesador y modelo concreto, en ese orden. Las listas largas se agrupan en bloques cortos (Pentium, Core, Xeon, EPYC, Cortex-A, Cortex-M, Neoverse), con un orden fijo que permite recorrerlas con Tab.
 - Macintosh PowerPC: placas PowerMac G3 y G4/G5 de QEMU 11.1, con procesadores G3, G4 y G5. Permite Mac OS clásico y Mac OS X PowerPC hasta 10.5 Leopard con una imagen de sistema aportada por el usuario.
 - Apple Silicon: no está entre las máquinas del QEMU 11.1 distribuido. La nota de la arquitectura lo indica en la interfaz.
 
-### 2.4.2 y 2.4.1 — listas completas
+### 2.4.2 y 2.4.1 - listas completas
 
 - 29 arquitecturas en un solo instalador: ARM, RISC-V, POWER, MIPS, SPARC, s390x, LoongArch, AVR, Alpha, PA-RISC, SuperH, MicroBlaze, OpenRISC, TriCore, Xtensa, Hexagon y Renesas RX, además de x86. Se eligen al crear o editar una máquina, en orden histórico.
 - Todos los procesadores x86 de QEMU 11.1: 188 modelos para x86 de 64 bits y 187 para 32 bits, del 486 de 1990 al Xeon Clearwater Forest de 2025 y el EPYC Turin, ordenados por año y con la descripción de QEMU.
@@ -41,16 +49,16 @@ Los números tienen cuatro partes: las tres primeras son la versión y la últim
 
 ## Descargar
 
-### Versión 2.4.4 en el canal de pruebas (opcional)
+### Versión 2.4.5 en el canal de pruebas (opcional)
 
-Instalador: StiexVM.exe (versión 2.4.4)
+Instalador: StiexVM.exe (versión 2.4.5)
 
 - [Descarga directa](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/StiexVM.exe)
 - [Página de la versión beta](https://github.com/starnix-g/QemuManager-releases/releases/tag/beta)
 - [Notas de la versión en texto](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/notas-beta.txt)
 
-Tamaño: 164.241.855 bytes  
-SHA256: `ff20ce5c602d2847005e8bc114f657746828086870e3f0f96141b3f8f50df225`
+Tamaño: 164.240.367 bytes  
+SHA256: `01fdc5369f36470150da43d9822bb5da319530279aa836912832d4633f3ea18c`
 
 ### Versión terminada 2.3.0
 
