@@ -11,9 +11,13 @@ Descargas oficiales de **StiexVM** (antes QemuManager Qt), un gestor de máquina
 
 GitHub marca **v2.3.0** como *Latest* porque la beta es una versión preliminar. La última beta está en la etiqueta fija `beta` y se describe abajo.
 
-## Canal de pruebas: 2.5.7
+## Canal de pruebas: 2.5.7.1
 
 Esta línea sigue en el canal de pruebas. La versión terminada sigue siendo la 2.3.0.
+
+### 2.5.7.1 — la ventana del visor vuelve a aparecer
+
+Corrección de la 2.5.7, sin funciones nuevas. Los ejecutables publicados son de interfaz gráfica, pero se lanzaban con la marca que oculta ventanas de consola: en Windows esa marca también escondía la ventana Qt. QEMU seguía en marcha, pero no se veía ninguna pantalla y parecía que la máquina no arrancaba. La marca se usa ahora solo al ejecutar desde las fuentes. «Abrir Stiex» desde el visor también se ve.
 
 ### 2.5.7 — arranque directo, actualizaciones visibles y lista de máquinas
 
@@ -48,9 +52,9 @@ Los números tienen cuatro partes: las tres primeras son la versión y la últim
 
 ## Descargar
 
-### Versión 2.5.7 en el canal de pruebas (opcional)
+### Versión 2.5.7.1 en el canal de pruebas (opcional)
 
-Instalador: **StiexVM.exe** (versión 2.5.7), con QEMU 11.1.0 incluido y sin modificar.
+Instalador: **StiexVM.exe** (versión 2.5.7.1), con QEMU 11.1.0 incluido y sin modificar.
 
 - [Descarga directa](https://github.com/starnix-g/StiexVM-releases/releases/download/beta/StiexVM.exe)
 - [Página de la versión beta](https://github.com/starnix-g/StiexVM-releases/releases/tag/beta)
@@ -59,8 +63,8 @@ Instalador: **StiexVM.exe** (versión 2.5.7), con QEMU 11.1.0 incluido y sin mod
 
 Enlace permanente de la beta: https://github.com/starnix-g/StiexVM-releases/releases/tag/beta
 
-Tamaño: **215.543.505 bytes**  
-SHA256: `b392808984e255045dd3e39aeddbc07993dcaa375854b0534c44a152fdc215ee`
+Tamaño: **215.552.821 bytes**  
+SHA256: `0407cc3ebf2ff5d42532eb7f4bdf57265d3866867cc26f94b031ca11acc8508c`
 
 ### Versión terminada 2.3.0
 
