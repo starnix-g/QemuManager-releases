@@ -9,13 +9,14 @@ Descargas oficiales de **StiexVM** (antes QemuManager Qt), un gestor de máquina
 - Si vienes de una versión anterior, el instalador retira los restos viejos antes de copiar los archivos nuevos.
 - El equipo no se reinicia sin avisar.
 
-## Todas las arquitecturas y todos los ARM en prueba: 2.4.1
+## Todas las arquitecturas, todos los ARM y todos los x86 en prueba: 2.4.2
 
 Es la versión nueva de la línea **2.4.x**. Sigue en el canal de pruebas. Si no quieres probarla, quédate con la versión 2.3.0 de más abajo.
 
 - **29 arquitecturas en un solo instalador.** Además de x86, están ARM, RISC-V, POWER, MIPS, SPARC, s390x, LoongArch, AVR, Alpha, PA-RISC, SuperH, MicroBlaze, OpenRISC, TriCore, Xtensa, Hexagon y Renesas RX. Se eligen al crear o editar una máquina, en orden histórico.
-- **Todos los procesadores ARM de QEMU 11.1.** ARM de 32 bits ofrece 24 modelos, del StrongARM y ARM9 al Cortex-A15 y Cortex-M55; ARM de 64 bits ofrece 36, del Cortex-A35 al A64FX y Neoverse V1. Hay 93 placas ARM de 32 bits y 108 de 64 bits, desde Integrator y Raspberry Pi hasta las versiones `virt` de QEMU.
-- **Muchos más modelos de procesador x86.** Del 486, Pentium y Athlon hasta Ice Lake, Sapphire Rapids, Granite Rapids, Clearwater Forest y EPYC Turin. Hay un campo «Otro modelo» para escribir cualquier otro nombre de CPU de QEMU.
+- **Todos los procesadores x86 de QEMU 11.1.** 188 modelos para x86 de 64 bits y 187 para 32 bits, del 486 de 1990 al Xeon Clearwater Forest de 2025 y el EPYC Turin, pasando por Pentium, Athlon, Core 2, Nehalem, Skylake, Icelake y Sapphire Rapids. Van ordenados por año, con la descripción de QEMU.
+- **Todos los procesadores ARM de QEMU 11.1.** ARM de 32 bits ofrece 24 modelos, del StrongARM y ARM9 al Cortex-A15 y Cortex-M55; ARM de 64 bits ofrece 36, del Cortex-A35 al A64FX y Neoverse V1. Hay 93 placas ARM de 32 bits y 108 de 64 bits, desde Integrator y Raspberry Pi hasta las versiones `virt` de QEMU. Los nombres comerciales (Snapdragon, Kirin, Dimensity) no existen en QEMU: se elige el núcleo Cortex en que se basan.
+- Hay un campo «Otro modelo» para escribir cualquier otro nombre de CPU de QEMU.
 - **Firmware para cada arquitectura** y máquinas antiguas sin cambios: si tu perfil no dice otra cosa, sigue siendo x86 de 64 bits con WHPX.
 - Las arquitecturas nuevas se emulan con TCG, porque WHPX solo existe en x86. Algunas aún se están probando con sistemas operativos reales.
 - El instalador es más grande: reúne todos los emuladores y su firmware en una sola descarga, sin paquetes aparte.
@@ -26,16 +27,16 @@ Los números tienen cuatro partes: las tres primeras son la versión y la últim
 
 ## Descargar
 
-### Versión 2.4.1 en el canal de pruebas (opcional)
+### Versión 2.4.2 en el canal de pruebas (opcional)
 
-Instalador: **StiexVM.exe** (versión 2.4.1)
+Instalador: **StiexVM.exe** (versión 2.4.2)
 
 - [Descarga directa](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/StiexVM.exe)
 - [Página de la versión beta](https://github.com/starnix-g/QemuManager-releases/releases/tag/beta)
 - [Notas de la versión en texto](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/notas-beta.txt)
 
-Tamaño: **164.209.845 bytes**  
-SHA256: `1e5a203bee402b574b47044bc6ddad5554f9f201f44ec5a38c4e8728eefbfe00`
+Tamaño: **164.222.462 bytes**  
+SHA256: `c3874c05980f289394f32e2a5f65bf91984de04d91081b57131e59a23f56ab56`
 
 ### Versión terminada 2.3.0
 
