@@ -9,34 +9,32 @@ Descargas oficiales de **StiexVM** (antes QemuManager Qt), un gestor de máquina
 - Si vienes de una versión anterior, el instalador retira los restos viejos antes de copiar los archivos nuevos.
 - El equipo no se reinicia sin avisar.
 
-## Cambio de nombre y arranque corregido en prueba: 2.3.1.3
+## Todas las arquitecturas en prueba: 2.4.0
 
-Es un ajuste sobre la 2.3.1.2: **no añade funciones** y sigue en el canal de pruebas. El programa pasa a llamarse **StiexVM**. Si no quieres probarlo, quédate con la versión 2.3.0 de más abajo.
+Es la primera versión de la línea **2.4.x** y añade funciones nuevas. Sigue en el canal de pruebas. Si no quieres probarla, quédate con la versión 2.3.0 de más abajo.
 
-- El nombre nuevo aparece en la ventana, la ayuda y los mensajes. El archivo que se descarga es `StiexVM.exe`.
-- Tus máquinas siguen donde estaban: la carpeta de perfiles, la carpeta de instalación y el actualizador no cambian de sitio. No hay que mover ni volver a crear nada.
-- Al actualizar se retiran el ejecutable y los accesos directos del nombre anterior, para que no queden dos entradas en el menú.
-- Aviso al abrir si hay una versión nueva, siempre con confirmación antes de instalar.
-- Canal beta opcional: en **Configuración → Actualizaciones** puedes activar **Recibir versiones beta**. Viene desactivado; si no lo activas, solo se te avisa de las versiones terminadas.
-- Incluye **QEMU 11.1.0** terminado, copiado sin modificar. QEMU nunca se actualiza por separado.
-- La descarga muestra una barra de progreso con botón **Cancelar descarga**. Si algo falla al empezar, puedes volver a intentarlo o abrir la página de descarga; no se instala nada a medias.
-- StiexVM no reinicia el equipo por su cuenta.
-- Arreglado el arranque con aceleración: con QEMU 11.1, Windows 11 podía detener la máquina al empezar. Ahora arranca y, si todavía se detuviera, el programa ofrece reiniciarla sin aceleración.
+- **29 arquitecturas en un solo instalador.** Además de x86, están ARM, RISC-V, POWER, MIPS, SPARC, s390x, LoongArch, AVR, Alpha, PA-RISC, SuperH, MicroBlaze, OpenRISC, TriCore, Xtensa, Hexagon y Renesas RX. Se eligen al crear o editar una máquina, en orden histórico.
+- **Muchos más modelos de procesador x86.** Del 486, Pentium y Athlon hasta Ice Lake, Sapphire Rapids, Granite Rapids, Clearwater Forest y EPYC Turin. Hay un campo «Otro modelo» para escribir cualquier otro nombre de CPU de QEMU.
+- **Firmware para cada arquitectura** y máquinas antiguas sin cambios: si tu perfil no dice otra cosa, sigue siendo x86 de 64 bits con WHPX.
+- Las arquitecturas nuevas se emulan con TCG, porque WHPX solo existe en x86. Algunas aún se están probando con sistemas operativos reales.
+- El instalador es más grande: reúne todos los emuladores y su firmware en una sola descarga, sin paquetes aparte.
+- Aviso al abrir si hay una versión nueva, siempre con confirmación antes de instalar. Canal beta opcional en **Configuración → Actualizaciones** (viene desactivado).
+- Incluye **QEMU 11.1.0** terminado, copiado sin modificar. QEMU nunca se actualiza por separado. StiexVM no reinicia el equipo por su cuenta.
 
-Los números tienen cuatro partes: las tres primeras son la versión y la última cuenta las correcciones, así que 2.3.1.3 es la tercera corrección de la 2.3.1. Las versiones de prueba llevan un sufijo, como 2.3.1-beta3. Cuando haya funciones nuevas se pasará a la línea **2.4.x** con sus propias betas.
+Los números tienen cuatro partes: las tres primeras son la versión y la última cuenta las correcciones. Las versiones de prueba llevan un sufijo. Las correcciones de la línea anterior están en 2.3.1.1, 2.3.1.2 y 2.3.1.3.
 
 ## Descargar
 
-### Versión 2.3.1.3 en el canal de pruebas (opcional)
+### Versión 2.4.0 en el canal de pruebas (opcional)
 
-Instalador: **StiexVM.exe** (versión 2.3.1.3)
+Instalador: **StiexVM.exe** (versión 2.4.0)
 
 - [Descarga directa](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/StiexVM.exe)
 - [Página de la versión beta](https://github.com/starnix-g/QemuManager-releases/releases/tag/beta)
 - [Notas de la versión en texto](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/notas-beta.txt)
 
-Tamaño: **77.874.089 bytes**  
-SHA256: `0a9d3f357a129789dc86d5ea284d552805307633152608a65b10c1b9b4bdfbd2`
+Tamaño: **164.201.319 bytes**  
+SHA256: `c82937f497f20e734021a4316cc204f3eac3f8afd4d560e04c87b88890a47a7f`
 
 ### Versión terminada 2.3.0
 
