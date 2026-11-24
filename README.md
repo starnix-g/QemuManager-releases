@@ -9,36 +9,48 @@ Descargas oficiales de **StiexVM** (antes QemuManager Qt), un gestor de máquina
 - Si vienes de una versión anterior, el instalador retira los restos viejos antes de copiar los archivos nuevos.
 - El equipo no se reinicia sin avisar.
 
-## Todas las arquitecturas, todos los ARM y todos los x86 en prueba: 2.4.3
+## Cambios recientes de la línea 2.4
 
-Es la versión nueva de la línea **2.4.x**. Sigue en el canal de pruebas. Si no quieres probarla, quédate con la versión 2.3.0 de más abajo.
+Esta línea sigue en el canal de pruebas. La versión terminada es la 2.3.0, más abajo.
 
-- **Elección en tres niveles.** Primero la arquitectura, después la familia de procesador y por último el modelo concreto. Las listas largas se agrupan en familias cortas (Pentium, Core, Xeon, EPYC, Cortex-A, Cortex-M, Neoverse…). El campo «Otro modelo» sigue permitiendo escribir cualquier nombre de QEMU.
-- **Macintosh PowerPC.** Al elegir PowerPC aparece la familia Macintosh, con las placas PowerMac G3 y G4/G5 de QEMU 11.1 y sus procesadores G3, G4 y G5. Sirve para Mac OS clásico y Mac OS X PowerPC (hasta 10.5 Leopard) con una imagen que aportes tú. **QEMU no emula Apple Silicon (M1/M2/M3/M4)** y aquí no se incluye firmware de Apple ni imágenes de macOS.
-- **29 arquitecturas en un solo instalador.** Además de x86, están ARM, RISC-V, POWER, MIPS, SPARC, s390x, LoongArch, AVR, Alpha, PA-RISC, SuperH, MicroBlaze, OpenRISC, TriCore, Xtensa, Hexagon y Renesas RX. Se eligen al crear o editar una máquina, en orden histórico.
-- **Todos los procesadores x86 de QEMU 11.1.** 188 modelos para x86 de 64 bits y 187 para 32 bits, del 486 de 1990 al Xeon Clearwater Forest de 2025 y el EPYC Turin, pasando por Pentium, Athlon, Core 2, Nehalem, Skylake, Icelake y Sapphire Rapids. Van ordenados por año, con la descripción de QEMU.
-- **Todos los procesadores ARM de QEMU 11.1.** ARM de 32 bits ofrece 24 modelos, del StrongARM y ARM9 al Cortex-A15 y Cortex-M55; ARM de 64 bits ofrece 36, del Cortex-A35 al A64FX y Neoverse V1. Hay 93 placas ARM de 32 bits y 108 de 64 bits, desde Integrator y Raspberry Pi hasta las versiones `virt` de QEMU. Los nombres comerciales (Snapdragon, Kirin, Dimensity) no existen en QEMU: se elige el núcleo Cortex en que se basan.
-- Hay un campo «Otro modelo» para escribir cualquier otro nombre de CPU de QEMU.
-- **Firmware para cada arquitectura** y máquinas antiguas sin cambios: si tu perfil no dice otra cosa, sigue siendo x86 de 64 bits con WHPX.
+### 2.4.4 — detención de máquinas
+
+- El diálogo de detención indica que la máquina se detiene de forma inmediata y que los cambios pendientes del sistema invitado podrían no guardarse. Se retiraron comparaciones y ejemplos innecesarios.
+- El botón pasa a «Deteniendo…» y queda desactivado en cuanto se confirma la detención, sin esperar al sondeo del proceso. La lista muestra «Deteniéndose» y, al terminar el proceso, el botón vuelve a «Iniciar».
+- Si el proceso sigue activo tres segundos después de pedir la detención, se fuerza su salida.
+- Una detención manual cancela cualquier reinicio automático registrado por un aviso anterior de la máquina.
+
+### 2.4.3 — elección por familia y Macintosh PowerPC
+
+- Arquitectura, familia de procesador y modelo concreto, en ese orden. Las listas largas se agrupan en bloques cortos (Pentium, Core, Xeon, EPYC, Cortex-A, Cortex-M, Neoverse…), con un orden fijo que permite recorrerlas con Tab.
+- Macintosh PowerPC: placas PowerMac G3 y G4/G5 de QEMU 11.1, con procesadores G3, G4 y G5. Permite Mac OS clásico y Mac OS X PowerPC hasta 10.5 Leopard con una imagen de sistema aportada por el usuario.
+- Apple Silicon: no está entre las máquinas del QEMU 11.1 distribuido. La nota de la arquitectura lo indica en la interfaz.
+
+### 2.4.2 y 2.4.1 — listas completas
+
+- 29 arquitecturas en un solo instalador: ARM, RISC-V, POWER, MIPS, SPARC, s390x, LoongArch, AVR, Alpha, PA-RISC, SuperH, MicroBlaze, OpenRISC, TriCore, Xtensa, Hexagon y Renesas RX, además de x86. Se eligen al crear o editar una máquina, en orden histórico.
+- Todos los procesadores x86 de QEMU 11.1: 188 modelos para x86 de 64 bits y 187 para 32 bits, del 486 de 1990 al Xeon Clearwater Forest de 2025 y el EPYC Turin, ordenados por año y con la descripción de QEMU.
+- Todos los procesadores ARM de QEMU 11.1: 24 modelos de 32 bits y 36 de 64 bits, con 93 y 108 placas respectivamente. Los nombres comerciales (Snapdragon, Kirin, Dimensity) no existen en QEMU: se elige el núcleo Cortex en que se basan.
+- El campo «Otro modelo» admite cualquier otro nombre de CPU de QEMU.
+- Firmware para cada arquitectura. Los perfiles existentes siguen con x86 de 64 bits y WHPX salvo indicación contraria.
 - Las arquitecturas nuevas se emulan con TCG, porque WHPX solo existe en x86. Algunas aún se están probando con sistemas operativos reales.
-- El instalador es más grande: reúne todos los emuladores y su firmware en una sola descarga, sin paquetes aparte.
-- Aviso al abrir si hay una versión nueva, siempre con confirmación antes de instalar. Canal beta opcional en **Configuración → Actualizaciones** (viene desactivado).
-- Incluye **QEMU 11.1.0** terminado, copiado sin modificar. QEMU nunca se actualiza por separado. StiexVM no reinicia el equipo por su cuenta.
+- Aviso al abrir si hay una versión nueva, siempre con confirmación. Canal beta opcional en Configuración → Actualizaciones, desactivado por defecto.
+- Incluye QEMU 11.1.0 copiado sin modificar. QEMU nunca se actualiza por separado y el equipo no se reinicia sin aviso.
 
 Los números tienen cuatro partes: las tres primeras son la versión y la última cuenta las correcciones. Las versiones de prueba llevan un sufijo. Las correcciones de la línea anterior están en 2.3.1.1, 2.3.1.2 y 2.3.1.3.
 
 ## Descargar
 
-### Versión 2.4.3 en el canal de pruebas (opcional)
+### Versión 2.4.4 en el canal de pruebas (opcional)
 
-Instalador: **StiexVM.exe** (versión 2.4.3)
+Instalador: StiexVM.exe (versión 2.4.4)
 
 - [Descarga directa](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/StiexVM.exe)
 - [Página de la versión beta](https://github.com/starnix-g/QemuManager-releases/releases/tag/beta)
 - [Notas de la versión en texto](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/notas-beta.txt)
 
-Tamaño: **164.244.897 bytes**  
-SHA256: `fc71f2f8e804dc30c3720a1f805c7eeb29280911c45e3e85f3cf9335b2bc3740`
+Tamaño: 164.241.855 bytes  
+SHA256: `ff20ce5c602d2847005e8bc114f657746828086870e3f0f96141b3f8f50df225`
 
 ### Versión terminada 2.3.0
 
