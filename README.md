@@ -9,10 +9,12 @@ Descargas oficiales de **StiexVM** (antes QemuManager Qt), un gestor de máquina
 - Si vienes de una versión anterior, el instalador retira los restos viejos antes de copiar los archivos nuevos.
 - El equipo no se reinicia sin avisar.
 
-## Todas las arquitecturas, todos los ARM y todos los x86 en prueba: 2.4.2
+## Todas las arquitecturas, todos los ARM y todos los x86 en prueba: 2.4.3
 
 Es la versión nueva de la línea **2.4.x**. Sigue en el canal de pruebas. Si no quieres probarla, quédate con la versión 2.3.0 de más abajo.
 
+- **Elección en tres niveles.** Primero la arquitectura, después la familia de procesador y por último el modelo concreto. Las listas largas se agrupan en familias cortas (Pentium, Core, Xeon, EPYC, Cortex-A, Cortex-M, Neoverse…). El campo «Otro modelo» sigue permitiendo escribir cualquier nombre de QEMU.
+- **Macintosh PowerPC.** Al elegir PowerPC aparece la familia Macintosh, con las placas PowerMac G3 y G4/G5 de QEMU 11.1 y sus procesadores G3, G4 y G5. Sirve para Mac OS clásico y Mac OS X PowerPC (hasta 10.5 Leopard) con una imagen que aportes tú. **QEMU no emula Apple Silicon (M1/M2/M3/M4)** y aquí no se incluye firmware de Apple ni imágenes de macOS.
 - **29 arquitecturas en un solo instalador.** Además de x86, están ARM, RISC-V, POWER, MIPS, SPARC, s390x, LoongArch, AVR, Alpha, PA-RISC, SuperH, MicroBlaze, OpenRISC, TriCore, Xtensa, Hexagon y Renesas RX. Se eligen al crear o editar una máquina, en orden histórico.
 - **Todos los procesadores x86 de QEMU 11.1.** 188 modelos para x86 de 64 bits y 187 para 32 bits, del 486 de 1990 al Xeon Clearwater Forest de 2025 y el EPYC Turin, pasando por Pentium, Athlon, Core 2, Nehalem, Skylake, Icelake y Sapphire Rapids. Van ordenados por año, con la descripción de QEMU.
 - **Todos los procesadores ARM de QEMU 11.1.** ARM de 32 bits ofrece 24 modelos, del StrongARM y ARM9 al Cortex-A15 y Cortex-M55; ARM de 64 bits ofrece 36, del Cortex-A35 al A64FX y Neoverse V1. Hay 93 placas ARM de 32 bits y 108 de 64 bits, desde Integrator y Raspberry Pi hasta las versiones `virt` de QEMU. Los nombres comerciales (Snapdragon, Kirin, Dimensity) no existen en QEMU: se elige el núcleo Cortex en que se basan.
@@ -27,16 +29,16 @@ Los números tienen cuatro partes: las tres primeras son la versión y la últim
 
 ## Descargar
 
-### Versión 2.4.2 en el canal de pruebas (opcional)
+### Versión 2.4.3 en el canal de pruebas (opcional)
 
-Instalador: **StiexVM.exe** (versión 2.4.2)
+Instalador: **StiexVM.exe** (versión 2.4.3)
 
 - [Descarga directa](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/StiexVM.exe)
 - [Página de la versión beta](https://github.com/starnix-g/QemuManager-releases/releases/tag/beta)
 - [Notas de la versión en texto](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/notas-beta.txt)
 
-Tamaño: **164.222.462 bytes**  
-SHA256: `c3874c05980f289394f32e2a5f65bf91984de04d91081b57131e59a23f56ab56`
+Tamaño: **164.244.897 bytes**  
+SHA256: `fc71f2f8e804dc30c3720a1f805c7eeb29280911c45e3e85f3cf9335b2bc3740`
 
 ### Versión terminada 2.3.0
 
