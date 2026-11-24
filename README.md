@@ -9,9 +9,9 @@ Descargas oficiales de **StiexVM** (antes QemuManager Qt), un gestor de máquina
 - Si vienes de una versión anterior, el instalador retira los restos viejos antes de copiar los archivos nuevos.
 - El equipo no se reinicia sin avisar.
 
-## Cambio de nombre en prueba: 2.3.1.2
+## Cambio de nombre y arranque corregido en prueba: 2.3.1.3
 
-Es un ajuste sobre la 2.3.1.1: **no añade funciones** y sigue en el canal de pruebas. El programa pasa a llamarse **StiexVM**. Si no quieres probarlo, quédate con la versión 2.3.0 de más abajo.
+Es un ajuste sobre la 2.3.1.2: **no añade funciones** y sigue en el canal de pruebas. El programa pasa a llamarse **StiexVM**. Si no quieres probarlo, quédate con la versión 2.3.0 de más abajo.
 
 - El nombre nuevo aparece en la ventana, la ayuda y los mensajes. El archivo que se descarga es `StiexVM.exe`.
 - Tus máquinas siguen donde estaban: la carpeta de perfiles, la carpeta de instalación y el actualizador no cambian de sitio. No hay que mover ni volver a crear nada.
@@ -21,21 +21,22 @@ Es un ajuste sobre la 2.3.1.1: **no añade funciones** y sigue en el canal de pr
 - Incluye **QEMU 11.1.0** terminado, copiado sin modificar. QEMU nunca se actualiza por separado.
 - La descarga muestra una barra de progreso con botón **Cancelar descarga**. Si algo falla al empezar, puedes volver a intentarlo o abrir la página de descarga; no se instala nada a medias.
 - StiexVM no reinicia el equipo por su cuenta.
+- Arreglado el arranque con aceleración: con QEMU 11.1, Windows 11 podía detener la máquina al empezar. Ahora arranca y, si todavía se detuviera, el programa ofrece reiniciarla sin aceleración.
 
-Los números tienen cuatro partes: las tres primeras son la versión y la última cuenta las correcciones, así que 2.3.1.2 es la segunda corrección de la 2.3.1. Las versiones de prueba llevan un sufijo, como 2.3.1-beta3. Cuando haya funciones nuevas se pasará a la línea **2.4.x** con sus propias betas.
+Los números tienen cuatro partes: las tres primeras son la versión y la última cuenta las correcciones, así que 2.3.1.3 es la tercera corrección de la 2.3.1. Las versiones de prueba llevan un sufijo, como 2.3.1-beta3. Cuando haya funciones nuevas se pasará a la línea **2.4.x** con sus propias betas.
 
 ## Descargar
 
-### Versión 2.3.1.2 en el canal de pruebas (opcional)
+### Versión 2.3.1.3 en el canal de pruebas (opcional)
 
-Instalador: **StiexVM.exe** (versión 2.3.1.2)
+Instalador: **StiexVM.exe** (versión 2.3.1.3)
 
 - [Descarga directa](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/StiexVM.exe)
 - [Página de la versión beta](https://github.com/starnix-g/QemuManager-releases/releases/tag/beta)
 - [Notas de la versión en texto](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/notas-beta.txt)
 
-Tamaño: **77.873.371 bytes**  
-SHA256: `d31a6519faaccb2748a8508ad66aa7d4087afc1cf237ea9322564c3561d5123b`
+Tamaño: **77.874.089 bytes**  
+SHA256: `0a9d3f357a129789dc86d5ea284d552805307633152608a65b10c1b9b4bdfbd2`
 
 ### Versión terminada 2.3.0
 
