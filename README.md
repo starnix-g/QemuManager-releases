@@ -9,64 +9,66 @@ Descargas oficiales de **StiexVM** (antes QemuManager Qt), un gestor de máquina
 - Si vienes de una versión anterior, el instalador retira los restos viejos antes de copiar los archivos nuevos.
 - El equipo no se reinicia sin avisar.
 
-## Cambios recientes de la línea 2.4
+GitHub marca **v2.3.0** como *Latest* porque la beta es una versión preliminar. La última beta está en la etiqueta fija `beta` y se describe abajo.
 
-Esta línea sigue en el canal de pruebas. La versión terminada es la 2.3.0.
+## Canal de pruebas: 2.5.7
 
-### 2.4.5 - pantalla integrada y audio estable
+Esta línea sigue en el canal de pruebas. La versión terminada sigue siendo la 2.3.0.
 
-- La pantalla de la máquina se muestra dentro de StiexVM desde el inicio, sin ventana propia de QEMU. El visor se abre al iniciar y queda activo para escribir en la máquina. Escape devuelve el control a StiexVM.
-- Al capturar el teclado, las teclas llegan a la máquina aunque el foco estuviera en un botón del visor. Pulsar sobre la pantalla también captura el teclado.
-- Los perfiles creados con versiones anteriores pasan a la pantalla integrada al cargarse. El resto de ajustes se conservan.
-- Si dos máquinas tienen el mismo puerto VNC, la que arranca toma el primero libre.
-- El sonido usa frecuencia fija de 44,1 kHz, dos canales, formato s16 y un búfer de salida mayor. La tarjeta emulada queda como salida sola, sin entrada de micrófono, para evitar cortes y ruidos cuando el invitado abre el audio.
+### 2.5.7 — arranque directo, actualizaciones visibles y lista de máquinas
 
-### 2.4.4 - detención de máquinas
+Corrección de la 2.5.6, sin funciones nuevas.
 
-- El diálogo de detención indica que la máquina se detiene de forma inmediata y que los cambios pendientes del sistema invitado podrían no guardarse. Se retiraron comparaciones y ejemplos innecesarios.
-- El botón pasa a «Deteniendo…» y queda desactivado en cuanto se confirma la detención, sin esperar al sondeo del proceso. La lista muestra «Deteniéndose» y, al terminar el proceso, el botón vuelve a «Iniciar».
-- Si el proceso sigue activo tres segundos después de pedir la detención, se fuerza su salida.
-- Una detención manual cancela cualquier reinicio automático registrado por un aviso anterior de la máquina.
+- La máquina arranca directamente: con disco e ISO se intenta primero el disco y la ISO queda como respaldo. Ya no aparece el «Press any key to boot from CD...».
+- Se quitó el menú de arranque: QEMU no recibe `menu=on` y la opción desapareció de «Editar».
+- El actualizador vuelve a avisar: acepta los servidores de objetos de GitHub, siempre por HTTPS, con tamaño y SHA256 verificados. Las betas solo se ofrecen si «Recibir versiones beta» está activado.
+- Las máquinas están en una lista, con nombre y estado en cada fila. Supr elimina la elegida y Enter abre la seleccionada y activa casillas y opciones.
 
-### 2.4.3 - elección por familia y Macintosh PowerPC
+### 2.5.6 — recursos razonables, captura inmediata y sin consolas
 
-- Arquitectura, familia de procesador y modelo concreto, en ese orden. Las listas largas se agrupan en bloques cortos (Pentium, Core, Xeon, EPYC, Cortex-A, Cortex-M, Neoverse), con un orden fijo que permite recorrerlas con Tab.
-- Macintosh PowerPC: placas PowerMac G3 y G4/G5 de QEMU 11.1, con procesadores G3, G4 y G5. Permite Mac OS clásico y Mac OS X PowerPC hasta 10.5 Leopard con una imagen de sistema aportada por el usuario.
-- Apple Silicon: no está entre las máquinas del QEMU 11.1 distribuido. La nota de la arquitectura lo indica en la interfaz.
+- El creador propone un cuarto de la RAM, en bloques de 4 GB y entre 2 y 16 GB.
+- Ctrl+Alt+Enter captura el teclado aunque la máquina no esté cargada.
+- No se abren consolas de QEMU al actualizar ni al iniciar.
 
-### 2.4.2 y 2.4.1 - listas completas
+### Histórico de la línea 2.4
 
-- 29 arquitecturas en un solo instalador: ARM, RISC-V, POWER, MIPS, SPARC, s390x, LoongArch, AVR, Alpha, PA-RISC, SuperH, MicroBlaze, OpenRISC, TriCore, Xtensa, Hexagon y Renesas RX, además de x86. Se eligen al crear o editar una máquina, en orden histórico.
-- Todos los procesadores x86 de QEMU 11.1: 188 modelos para x86 de 64 bits y 187 para 32 bits, del 486 de 1990 al Xeon Clearwater Forest de 2025 y el EPYC Turin, ordenados por año y con la descripción de QEMU.
-- Todos los procesadores ARM de QEMU 11.1: 24 modelos de 32 bits y 36 de 64 bits, con 93 y 108 placas respectivamente. Los nombres comerciales (Snapdragon, Kirin, Dimensity) no existen en QEMU: se elige el núcleo Cortex en que se basan.
-- El campo «Otro modelo» admite cualquier otro nombre de CPU de QEMU.
-- Firmware para cada arquitectura. Los perfiles existentes siguen con x86 de 64 bits y WHPX salvo indicación contraria.
-- Las arquitecturas nuevas se emulan con TCG, porque WHPX solo existe en x86. Algunas aún se están probando con sistemas operativos reales.
-- Aviso al abrir si hay una versión nueva, siempre con confirmación. Canal beta opcional en Configuración → Actualizaciones, desactivado por defecto.
-- Incluye QEMU 11.1.0 copiado sin modificar. QEMU nunca se actualiza por separado y el equipo no se reinicia sin aviso.
+**2.4.6.1 — corrección de errores.** Audio con búferes cortos encadenados, visor sin barras visibles, avisos de captura y menús completos del cliente pequeño.
+
+**2.4.6 — pantalla SPICE y control de la máquina.** Visor SPICE integrado, teclado con scancodes reales, menús con reiniciar, apagar, suspender, continuar y detener, y configuración por pestañas.
+
+**2.4.5 — pantalla integrada y audio estable.** Pantalla dentro de StiexVM desde el inicio, teclado capturado que llega a la máquina, puertos libres automáticos y audio sin cortes.
+
+**2.4.4 — detención de máquinas.** Aviso claro de detención inmediata, estado «Deteniéndose» y salida forzada si el proceso sigue vivo.
+
+**2.4.3 — elección por familia y Macintosh PowerPC.** Arquitectura, familia y modelo, con Macs G3/G4/G5 y firmware por arquitectura.
+
+**2.4.2 y 2.4.1 — listas completas.** 29 arquitecturas, todos los procesadores x86 y ARM de QEMU 11.1 y campo «Otro modelo».
 
 Los números tienen cuatro partes: las tres primeras son la versión y la última cuenta las correcciones. Las versiones de prueba llevan un sufijo. Las correcciones de la línea anterior están en 2.3.1.1, 2.3.1.2 y 2.3.1.3.
 
 ## Descargar
 
-### Versión 2.4.5 en el canal de pruebas (opcional)
+### Versión 2.5.7 en el canal de pruebas (opcional)
 
-Instalador: StiexVM.exe (versión 2.4.5)
+Instalador: **StiexVM.exe** (versión 2.5.7), con QEMU 11.1.0 incluido y sin modificar.
 
-- [Descarga directa](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/StiexVM.exe)
-- [Página de la versión beta](https://github.com/starnix-g/QemuManager-releases/releases/tag/beta)
-- [Notas de la versión en texto](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/notas-beta.txt)
+- [Descarga directa](https://github.com/starnix-g/StiexVM-releases/releases/download/beta/StiexVM.exe)
+- [Página de la versión beta](https://github.com/starnix-g/StiexVM-releases/releases/tag/beta)
+- [Notas de la versión en texto](https://github.com/starnix-g/StiexVM-releases/releases/download/beta/notas-beta.txt)
+- [Manifiesto que lee el actualizador](https://github.com/starnix-g/StiexVM-releases/releases/download/beta/latest.json)
 
-Tamaño: 164.240.367 bytes  
-SHA256: `01fdc5369f36470150da43d9822bb5da319530279aa836912832d4633f3ea18c`
+Enlace permanente de la beta: https://github.com/starnix-g/StiexVM-releases/releases/tag/beta
+
+Tamaño: **215.543.505 bytes**  
+SHA256: `b392808984e255045dd3e39aeddbc07993dcaa375854b0534c44a152fdc215ee`
 
 ### Versión terminada 2.3.0
 
 Instalador: **QM.manager.exe** (versión 2.3.0)
 
-- [Descarga directa](https://github.com/starnix-g/QemuManager-releases/releases/download/v2.3.0/QM.manager.exe)
-- [Página de la versión 2.3.0](https://github.com/starnix-g/QemuManager-releases/releases/tag/v2.3.0)
-- [Notas de la versión en texto](https://github.com/starnix-g/QemuManager-releases/releases/download/v2.3.0/notas-v2.3.0.txt)
+- [Descarga directa](https://github.com/starnix-g/StiexVM-releases/releases/download/v2.3.0/QM.manager.exe)
+- [Página de la versión 2.3.0](https://github.com/starnix-g/StiexVM-releases/releases/tag/v2.3.0)
+- [Notas de la versión en texto](https://github.com/starnix-g/StiexVM-releases/releases/download/v2.3.0/notas-v2.3.0.txt)
 
 Tamaño: **65.682.238 bytes**  
 SHA256: `8d83c2df3a3685d9ad0989ec50482f7c7abca32bf08bde6b890f6caa22d1ce72`
