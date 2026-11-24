@@ -9,11 +9,12 @@ Descargas oficiales de **StiexVM** (antes QemuManager Qt), un gestor de máquina
 - Si vienes de una versión anterior, el instalador retira los restos viejos antes de copiar los archivos nuevos.
 - El equipo no se reinicia sin avisar.
 
-## Todas las arquitecturas en prueba: 2.4.0
+## Todas las arquitecturas y todos los ARM en prueba: 2.4.1
 
-Es la primera versión de la línea **2.4.x** y añade funciones nuevas. Sigue en el canal de pruebas. Si no quieres probarla, quédate con la versión 2.3.0 de más abajo.
+Es la versión nueva de la línea **2.4.x**. Sigue en el canal de pruebas. Si no quieres probarla, quédate con la versión 2.3.0 de más abajo.
 
 - **29 arquitecturas en un solo instalador.** Además de x86, están ARM, RISC-V, POWER, MIPS, SPARC, s390x, LoongArch, AVR, Alpha, PA-RISC, SuperH, MicroBlaze, OpenRISC, TriCore, Xtensa, Hexagon y Renesas RX. Se eligen al crear o editar una máquina, en orden histórico.
+- **Todos los procesadores ARM de QEMU 11.1.** ARM de 32 bits ofrece 24 modelos, del StrongARM y ARM9 al Cortex-A15 y Cortex-M55; ARM de 64 bits ofrece 36, del Cortex-A35 al A64FX y Neoverse V1. Hay 93 placas ARM de 32 bits y 108 de 64 bits, desde Integrator y Raspberry Pi hasta las versiones `virt` de QEMU.
 - **Muchos más modelos de procesador x86.** Del 486, Pentium y Athlon hasta Ice Lake, Sapphire Rapids, Granite Rapids, Clearwater Forest y EPYC Turin. Hay un campo «Otro modelo» para escribir cualquier otro nombre de CPU de QEMU.
 - **Firmware para cada arquitectura** y máquinas antiguas sin cambios: si tu perfil no dice otra cosa, sigue siendo x86 de 64 bits con WHPX.
 - Las arquitecturas nuevas se emulan con TCG, porque WHPX solo existe en x86. Algunas aún se están probando con sistemas operativos reales.
@@ -25,16 +26,16 @@ Los números tienen cuatro partes: las tres primeras son la versión y la últim
 
 ## Descargar
 
-### Versión 2.4.0 en el canal de pruebas (opcional)
+### Versión 2.4.1 en el canal de pruebas (opcional)
 
-Instalador: **StiexVM.exe** (versión 2.4.0)
+Instalador: **StiexVM.exe** (versión 2.4.1)
 
 - [Descarga directa](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/StiexVM.exe)
 - [Página de la versión beta](https://github.com/starnix-g/QemuManager-releases/releases/tag/beta)
 - [Notas de la versión en texto](https://github.com/starnix-g/QemuManager-releases/releases/download/beta/notas-beta.txt)
 
-Tamaño: **164.201.319 bytes**  
-SHA256: `c82937f497f20e734021a4316cc204f3eac3f8afd4d560e04c87b88890a47a7f`
+Tamaño: **164.209.845 bytes**  
+SHA256: `1e5a203bee402b574b47044bc6ddad5554f9f201f44ec5a38c4e8728eefbfe00`
 
 ### Versión terminada 2.3.0
 
