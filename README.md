@@ -11,9 +11,18 @@ Descargas oficiales de **StiexVM** (antes QemuManager Qt), un gestor de máquina
 
 GitHub marca **v2.3.0** como *Latest* porque la beta es una versión preliminar. La última beta está en la etiqueta fija `beta` y se describe abajo.
 
-## Canal de pruebas: 2.5.7.1
+## Canal de pruebas: 2.5.7.2
 
 Esta línea sigue en el canal de pruebas. La versión terminada sigue siendo la 2.3.0.
+
+### 2.5.7.2 — beta corrección de errores
+
+Beta de corrección de errores, sin funciones nuevas.
+
+- **UEFI vuelve a arrancar desde una ISO.** Los instaladores de Windows muestran «Press any key to boot from CD or DVD…». Si nadie respondía, OVMF agotaba el tiempo y la máquina acababa en el intérprete UEFI. StiexVM pulsa Intro automáticamente durante ese instante, solo cuando el CD-ROM es el primero o el único dispositivo de arranque. No afecta a máquinas que arrancan desde disco, con BIOS o por red.
+- **WHPX sigue estable.** Se mantiene `-cpu host,-vmx,-svm` y la vuelta automática a TCG cuando WHPX no está operativo. UEFI ya no se desactiva como solución alternativa.
+
+Descarga de la beta: `StiexVM.exe` en la etiqueta fija `beta`. Tamaño: 215559448 bytes. SHA256: `77067f92ab8cad958bf1e77c82a8b51b8a80a69f31153125ce30bcc75d2ba4b2`. Sin firma Authenticode: verifica siempre el SHA256 y descarga solo desde esta página.
 
 ### 2.5.7.1 — la ventana del visor vuelve a aparecer
 
